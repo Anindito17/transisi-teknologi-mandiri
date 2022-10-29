@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<button id=" button" onlick="duplicate()">Add another plan</button>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="asd"></div>
+        <button onclick="create()" id="create" class="btn btn-primary">Soru oluştur</button><br /><br /><button class="btn btn-dark col-md-2 pull-right" style="text-align:center" onclick="list()">Liste</button>
+        <button class="btn btn-success col-md-4 offset-4" style="text-align:center" style="position: static" id="btn" onclick="save()">Kaydet</button>
+      </div>
+      <script>
+        function create() {
+          $("<div class='question container' id='question'" + "style='background-color:lavender;border:solid 15px darkcyan;" + " height:500px; border-radius:32px'><div class='input-group' " + "style='margin-top:10px'><input type='text' placeholder='Soru Gir...' class='form-control'/> " +
+              "&nbsp; &nbsp;<button class='btn btn-danger deletequestion' >Sil</button>" + "&nbsp; &nbsp;" + "<button class='btn btn-success' onclick='createSelection(this)'>Şık Ekle</button></div></div></br>")
+            .insertBefore("#btn");
+        }
+      
+        function createSelection(x) {
+          $(x).closest('.question').first('.selection').append(
+            "<div class='input-group selection' style='margin-top:10px' id='selection'>" + "<input type='text' id='clean' placeholder='Şık Gir...' class='form-control'/> " + "&nbsp; &nbsp;<button class='btn btn-danger deleteselection'>Şıkı Sil</button>" + & nbsp; & nbsp; < button class = 'btn btn-success'
+            onclick = 'clean()' > Temizle < /button></div > ");
+          }
+      </script>
+</body>
+
+</html>
